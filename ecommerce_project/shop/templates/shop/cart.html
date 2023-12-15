@@ -1,0 +1,6 @@
+<!-- shop/templates/shop/cart.html -->
+<h1>Shopping Cart</h1>
+{% for order_item in order.orderitem_set.all %}
+  <p>{{ order_item.product.name }} - Quantity: {{ order_item.quantity }}</p>
+{% endfor %}
+<p>Total Price: ${{ order.total_price }}</p>
